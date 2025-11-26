@@ -10,8 +10,8 @@ USER root
 RUN apt-get update && \
     apt-get install -y --no-install-recommends ffmpeg libsndfile1 && \
     rm -rf /var/lib/apt/lists/*
-    mkdir -p /cache/huggingface /tmp && \
-    chgrp -R 0 /cache /tmp && \
+    mkdir -p /cache/huggingface /tmp  \
+    chgrp -R 0 /cache /tmp  \
     chmod -R g=u /cache /tmp \
     pip install --no-cache-dir "vllm[audio]==${VLLM_VERSION}"
     
