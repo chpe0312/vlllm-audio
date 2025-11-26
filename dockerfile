@@ -1,7 +1,7 @@
 # Dockerfile
-FROM vllm/vllm-openai:0.11.2
+FROM vllm/vllm-openai:v0.10.2
 
-ARG VLLM_VERSION=0.11.2
+ARG VLLM_VERSION=0.10.2
 
 USER root
 
