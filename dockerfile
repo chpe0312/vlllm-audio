@@ -9,7 +9,7 @@ USER root
 # libsndfile1 ist häufig für Audio-IO hilfreich (je nach Stack).
 RUN apt-get update && \
     apt-get install -y --no-install-recommends ffmpeg libsndfile1 && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* \
     mkdir -p /cache/huggingface /tmp  \
     chgrp -R 0 /cache /tmp  \
     chmod -R g=u /cache /tmp \
